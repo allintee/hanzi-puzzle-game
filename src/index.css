@@ -1,0 +1,51 @@
+/* Tailwind CSS 基础指令 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式 for html 和 body，设置可爱的背景图片 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* 确保 html 和 body 占据整个视口高度 */
+  overflow-x: hidden; /* 防止出现水平滚动条 */
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* 保持字体一致 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* 可爱背景图片设置 */
+  /* !!重要!! 请将 'https://placehold.co/1920x1080/FFD1DC/FF69B4?text=Cute+Background+Pattern' 替换为您自己的可爱图片链接 */
+  /* 您可以在 Unsplash, Pixabay 等免费图片网站上寻找，例如搜索 "cute pattern", "kawaii background" */
+  background-image: url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+  background-size: cover;       /* 确保背景图片覆盖整个背景区域 */
+  background-position: center;  /* 将背景图片居中 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
+  background-attachment: fixed; /* 当页面滚动时，背景图片保持固定 */
+}
+
+/* 彩带效果的全局 CSS - 确保其正确显示 */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* 允许鼠标点击事件穿透彩带容器，不影响页面交互 */
+  z-index: 1000; /* 确保彩带显示在所有其他内容的顶层 */
+}
+
+.confetti {
+  position: absolute;
+  border-radius: 50%; /* 使彩带形状为圆形 */
+  opacity: 0; /* 初始状态为不可见 */
+  animation-name: confetti-fall; /* 引用 tailwind.config.js 中定义的关键帧动画 */
+  animation-timing-function: ease-out; /* 动画速度曲线 */
+  animation-fill-mode: forwards; /* 动画结束后保持其最终状态 */
+  animation-iteration-count: 1; /* 每个彩带只播放一次动画 */
+  transform: translateY(-100vh); /* 初始位置在视口上方，使其从顶部落下 */
+  /* 其他随机属性（如位置、颜色、大小）将在 React 组件中通过 inline style 设置 */
+}
