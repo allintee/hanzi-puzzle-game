@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hanzi-puzzle-game/static/css/main.aecb6673.css",
+    "main.js": "/hanzi-puzzle-game/static/js/main.c8245d6e.js",
+    "static/js/453.db5ff6b0.chunk.js": "/hanzi-puzzle-game/static/js/453.db5ff6b0.chunk.js",
+    "index.html": "/hanzi-puzzle-game/index.html",
+    "main.aecb6673.css.map": "/hanzi-puzzle-game/static/css/main.aecb6673.css.map",
+    "main.c8245d6e.js.map": "/hanzi-puzzle-game/static/js/main.c8245d6e.js.map",
+    "453.db5ff6b0.chunk.js.map": "/hanzi-puzzle-game/static/js/453.db5ff6b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aecb6673.css",
+    "static/js/main.c8245d6e.js"
+  ]
+}
